@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Images Mapping</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif; 
+            color: rgb(255, 255, 255); 
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('grey.jpg'); /* Replace with your background image */
+            background-size: cover; 
+            background-position: center;
+            filter: blur(3px); 
+            z-index: -1;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 700; 
+            margin-top: 70px;
+        }
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        p {
+            margin-top: 20px; 
+            font-size: 20px;
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> 
+    <div class="content">
+        <h1>Phone Image Mapping</h1>
+        <img src="pho.jpg" usemap="#image-map" alt="Sample Map" />
+
+        <p>This image illustrates the mapping of various phone models. Click on the designated areas to learn more about each phone.</p>
+
+        <map name="image-map">
+            <area shape="rect" coords="57,30,240,359" title="SAMSUNG S-22" href="samsung.html" alt="Google Pixel 9" />
+            <area shape="rect" coords="255,31,416,350" title="Iphone 15 Pro-Max" href="iphone.html" alt="SAMSUNG S-22" />
+            <area shape="rect" coords="443,32,606,357" title="Google Pixel A9" href="google.html" alt="iPhone 15 Pro-Max" />
+        </map>
+    </div>
+</body>
+</html>
